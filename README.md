@@ -26,6 +26,7 @@ Gurashish Singh Anand(Frontend Developer)
 Aman Yadav (Frontend Developer)
 Dhrumil Rajesh Shah (ScrumMaster)
 Ben Grandy (Developer)
+Dalton Comer (Product Owner / Frontend Developer)
 
 
 Scrum Meetings:

@@ -1,5 +1,4 @@
 import { Component, OnInit, Input, OnDestroy } from '@angular/core';
-
 @Component({
   selector: 'unity',
   templateUrl: './unity.component.html',
@@ -38,14 +37,22 @@ export class UnityComponent implements OnInit {
       container.className = "unity-mobile";
       canvas.className = "unity-mobile";
     } else {
+      //default sizes for desktop
       canvas.style.width = "960px";
       canvas.style.height = "600px";
     }
 
+    //loading bar
     loadingBar.style.display = "block";
 
+    //script that is displaying the build component from webgl
     var script = document.createElement("script");
+    //instance of an unity webgl
+    var mainUnityInstance;
+
+    //load the script file from webgl
     script.src = loaderUrl;
+
     script.onload = () => {
       createUnityInstance(canvas, config, (progress: number) => {
         progressBarFull.style.width = 100 * progress + "%";
@@ -54,10 +61,13 @@ export class UnityComponent implements OnInit {
         fullscreenButton.onclick = () => {
           unityInstance.SetFullscreen(1);
         };
+        //creation of the main instance to do some tweeks
+        mainUnityInstance = unityInstance;
       }).catch((message: any) => {
         alert(message);
       });
     };
+    //append the loaded script to the html body
     document.body.appendChild(script);
   }
 }

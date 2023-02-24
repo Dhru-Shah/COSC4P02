@@ -32,29 +32,21 @@ body {
 }
 
 .darkHomeDiv {
-    align-items: flex-start;
     background-color: rgb(52, 52, 72);
-    display: flex;
-    gap: 100px;
-    height: 700px;
-    min-width: 1080px;
 }
 
 .museumImage {
-    height: 400px;
-    width: 575px;
     border: 2px solid rgba(243, 237, 237, 1);
     border-radius: 2%;
-    margin: 107.7px 163.7px;
+    margin: auto auto;
+   
 }
 
 .wordCol {
     align-items: flex-start;
     display: flex;
     flex-direction: column;
-    margin-top: 130px;
-    min-height: 350px;
-    width: 445px;
+    
 }
 
 
@@ -65,7 +57,6 @@ body {
     font-family: 'Mulish';
     letter-spacing: 0.2px;
     line-height: 56px;
-    width: 445px;
 }
 
 .lightTextOnDarkBack {
@@ -77,7 +68,7 @@ body {
     font-style: normal;
     letter-spacing: 0.3px;
     line-height: 22px;
-    width: 445px;
+
 }
 
 #learnMore {
@@ -130,4 +121,21 @@ body {
       margin-top: 0;
     }
   }
+
+  .btn-primary-outline {
+    background-color: transparent;
+    border-color: white;
+    color: white;
+    border-radius: 0%;
+    
+  }
+  .btn-primary-green{
+    background-color: #4B807E;
+    color: white;
+    border-radius: 0%;
+  }
+  .on-Click:not(:disabled):not(:disabled):active {
+    background-color: darkgrey;
+ } 
+  
   

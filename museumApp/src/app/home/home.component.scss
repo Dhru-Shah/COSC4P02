@@ -1,29 +1,12 @@
-/*  Nav bar styles*/
-* {
-    padding: 0;
-    margin: 0;
+
+.d-sm-flex, .d-lg-flex{
+    gap:50px;
 }
+#Experience{
 
-.navBar {
-    justify-content: center;
-    background-color: grey;
-    padding: 0px 0 0 0;
-    height: 50px;
+    background-color: rgb(52, 52, 72);
 }
-
-.navBar ul {
-
-    list-style: none;
-}
-
-.navBar li {
-    margin: 0;
-    padding: 0.2em;
-    display: inline;
-    margin-right: 50px;
-}
-
-.navBar li:hover {
+.navBar ul li a:hover {
     color: red;
 }
 
@@ -31,56 +14,76 @@ body {
     font-family: 'Mulish', sans-serif;
 }
 
-.darkHomeDiv {
-    align-items: flex-start;
-    background-color: rgb(52, 52, 72);
-    display: flex;
-    gap: 100px;
-    height: 700px;
-    min-width: 1080px;
-}
-
-.museumImage {
-    height: 400px;
-    width: 575px;
-    border: 2px solid rgba(243, 237, 237, 1);
-    border-radius: 2%;
-    margin: 107.7px 163.7px;
-}
-
-.wordCol {
-    align-items: flex-start;
-    display: flex;
-    flex-direction: column;
-    margin-top: 130px;
-    min-height: 350px;
-    width: 445px;
-}
 
 
-.lightHeadingOnDarkBack {
-    color: rgba(243, 237, 237, 1);
-    font-size: 44px;
-    font-weight: 600;
-    font-family: 'Mulish';
-    letter-spacing: 0.2px;
-    line-height: 56px;
-    width: 445px;
-}
 
-.lightTextOnDarkBack {
-    margin-top: 33px;
-    color: rgba(243, 237, 237, 1);
-    font-family: 'Mulish';
-    font-size: 16px;
-    font-weight: 400;
-    font-style: normal;
-    letter-spacing: 0.3px;
-    line-height: 22px;
-    width: 445px;
-}
-
-.lightHomeDiv {
+#learnMore {
     background-color: #F3EDED;
     height: 500px;
 }
+
+
+
+.scrollToLearn{
+    height: 130;
+    padding-top: 20px;
+    text-align: center;
+    font-family: 'Mulish';
+    font-size: 20;
+    letter-spacing: 0.1px;
+    line-height: 40px;
+}
+
+.down-arrow {
+    position: absolute;
+    top: calc(100vh - 80px);
+    left: calc(50% - 14px);
+    width: 0;
+    height: 30px;
+    border: 2px solid;
+    border-radius: 2px;
+    animation: jumpInfinite 1.5s infinite;
+  }
+  
+  .down-arrow:after {
+    content: " ";
+    position: absolute;
+    top: 10.5px;
+    left: -8px;
+    width: 16px;
+    height: 16px;
+    border-bottom: 4px solid;
+    border-right: 4px solid;
+    border-radius: 4px;
+    transform: rotateZ(45deg);
+  }
+  
+  @keyframes jumpInfinite {
+    0% {
+      margin-top: 0;
+    }
+    50% {
+      margin-top: 20px;
+    }
+    100% {
+      margin-top: 0;
+    }
+  }
+
+  .btn-primary-outline {
+    background-color: transparent;
+    border-color: white;
+    color: white;
+    border-radius: 0%;
+    
+  }
+  .btn-primary-green{
+    background-color: #4B807E;
+    color: white;
+    border-radius: 0%;
+  }
+  .on-Click:not(:disabled):not(:disabled):active {
+    background-color: darkgrey;
+ } 
+  
+  

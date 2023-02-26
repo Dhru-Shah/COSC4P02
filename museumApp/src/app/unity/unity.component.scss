@@ -95,3 +95,11 @@ body {
     padding: 10px;
     display: none
 }
+
+.tours-instructions {
+    font-size: larger;
+
+    .tours-instructions-warning {
+        color: red;
+    }
+}

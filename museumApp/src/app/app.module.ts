@@ -19,6 +19,7 @@ const appRout: Routes = [
   {path: 'AboutUs', component: AboutComponent},
   {path: 'Tours', component: ToursComponent},
   {path: 'Catalogue', component: CatalogueComponent},
+  {path: 'Unity', component: UnityComponent},
   {path: '**', component: ErrorComponent}
 ];
 

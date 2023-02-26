@@ -1,1 +1,43 @@
-<p>catalogue works!</p>
+<div class="contentWrapper">
+    <div class="leftPane">
+        <div class="filterPanel">
+            <div class="searchBar">
+                <input type="text"><button>Search</button>
+            </div>
+            <div class="categoryMenu">
+                <select name="categoryOptions" id="categories"></select>
+            </div>
+            <div class="viewOptions">
+                <div class="filterButton">Filter</div>
+                <div class="sortButton">Sort</div>
+            </div>
+        </div>
+        <div class="artifactListWrap">
+            <div class="artifactCard" *ngFor="let artifact of artifacts">
+                <h5 class="artifactName">
+                    {{artifact.name}}
+                </h5>
+                <div class="artifactContent">
+                    <div class="artifactImage">
+
+                    </div>
+                    <div class="artifactDetails">
+                        <div class="artifactDate">
+                        <b>Date:</b> {{artifact.date}}
+                        </div>
+                        <div class="artifactCategory">
+                            <b>Category:</b> <br> {{artifact.category}}
+                        </div>
+                        <p class="artifactDescription">
+                            <b>Description:</b> <br>
+                        </p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="rightPane">
+
+    </div>
+</div>

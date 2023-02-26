@@ -21,5 +21,5 @@ export class ToursComponent {
     {name:'Exhibit #10', details:'This is some filler text where the detailed description of the exhibit should go'},
     {name:'Exhibit #11', details:'This is some filler text where the detailed description of the exhibit should go'},
   ];
-
+  
 }

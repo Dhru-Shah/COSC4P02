@@ -69,4 +69,21 @@ body {
       margin-top: 0;
     }
   }
+
+  .btn-primary-outline {
+    background-color: transparent;
+    border-color: white;
+    color: white;
+    border-radius: 0%;
+    
+  }
+  .btn-primary-green{
+    background-color: #4B807E;
+    color: white;
+    border-radius: 0%;
+  }
+  .on-Click:not(:disabled):not(:disabled):active {
+    background-color: darkgrey;
+ } 
+  
   

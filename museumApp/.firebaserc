@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "museum-8d13e": {
+      "hosting": {
+        "museumApp": [
+          "museum-8d13e"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "museum-8d13e"
+  }
+}

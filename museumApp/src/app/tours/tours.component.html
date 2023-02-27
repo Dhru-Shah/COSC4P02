@@ -1,6 +1,29 @@
-<section>
-
-  <p>tours works!</p>
-  <unity></unity>
-
-</section>
+<div class="wrapper">
+    <div class="categories">
+        Categories:
+        <div class="categoryName" *ngFor="let category of [{name:'All Categories'},{name:'Wars'},{name:'Production/Trade'}]">{{category.name}}</div>
+    </div>
+    <div class="exhibits">
+        <div class="searchBar">
+            <input type="text">
+            <div class="search-button">
+                <span class="searchText">Search</span>
+            </div>
+        </div>
+        <div class="contentWrap">
+        <div class="detailsOverview">
+            <div class="carousel-button"> < </div>
+                <div class="exhibit-cards">
+                    <div class="exhibitDetails" *ngFor="let exhibit of exhibitDetails">
+                        <div class="exhibitText">
+                            <h3>{{exhibit.name}}</h3>
+                            <p>{{exhibit.details}}</p>
+                        </div>
+                        <div class="enterExhibit-button"><a href="Unity" class="enterExhibit-text">Enter Exhibit</a></div>
+                    </div>
+                </div>
+            <div class="carousel-button"> > </div>
+        </div>
+    </div>
+    </div>
+</div>

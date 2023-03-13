@@ -1,9 +1,0 @@
-{
-    "dataUrl": "/Room.data",
-    "frameworkUrl": "/Room.framework.js",
-    "codeUrl": "/Room.wasm",
-    "streamingAssetsUrl": "StreamingAssets",
-    "companyName": "DefaultCompany",
-    "productName": "Room",
-    "productVersion": "0.1"
-}

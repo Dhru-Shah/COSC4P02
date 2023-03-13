@@ -1,33 +1,34 @@
-import { Component, OnInit } from '@angular/core';
-import { FirebaseService } from '../services/firebase.service';
-import { Artifacts } from '../models/artifacts.model';
-import { map } from 'rxjs/operators';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-catalogue',
   templateUrl: './catalogue.component.html',
   styleUrls: ['./catalogue.component.scss']
 })
-export class CatalogueComponent implements OnInit {
-  artifacts: Artifacts[]
+export class CatalogueComponent {
 
-  constructor(public service: FirebaseService) { }
-
-  ngOnInit(): void {
-    this.getAllInfo();
-  }
-
-  getAllInfo(): void {
-    this.service.getInfo().snapshotChanges().pipe(
-      map(changes =>
-        changes.map(c =>
-          ({ key: c.payload.key, ...c.payload.val() })
-        )
-      )
-    ).subscribe(data => {
-      this.artifacts = data;
-    });
-  }
+  artifacts = [{name:"artifact #1",date:1965,category:"production/trade"},
+                {name:"artifact #2",date:1912,category:"wars"},
+                {name:"artifact #2",date:1912,category:"wars"},
+                {name:"artifact #2",date:1912,category:"wars"},
+                {name:"artifact #2",date:1912,category:"wars"},
+                {name:"artifact #2",date:1912,category:"wars"},
+                {name:"artifact #2",date:1912,category:"wars"},
+                {name:"artifact #2",date:1912,category:"wars"},
+                {name:"artifact #2",date:1912,category:"wars"},
+                {name:"artifact #2",date:1912,category:"wars"},
+                {name:"artifact #2",date:1912,category:"wars"},
+                {name:"artifact #3",date:1943,category:"production/trade"},
+                {name:"artifact #2",date:1912,category:"wars"},
+                {name:"artifact #2",date:1912,category:"wars"},
+                {name:"artifact #2",date:1912,category:"wars"},
+                {name:"artifact #2",date:1912,category:"wars"},
+                {name:"artifact #2",date:1912,category:"wars"},
+                {name:"artifact #2",date:1912,category:"wars"},
+                {name:"artifact #2",date:1912,category:"wars"},
+                {name:"artifact #2",date:1912,category:"wars"},
+                {name:"artifact #2",date:1912,category:"wars"},
+                {name:"artifact #2",date:1912,category:"wars"},
+                {name:"artifact #2",date:1912,category:"wars"},
+              ]
 }
-
-

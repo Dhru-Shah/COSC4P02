@@ -11,6 +11,14 @@ import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ToursComponent } from './tours/tours.component';
 import { UnityComponent } from './unity/unity.component';
+import { FirebaseService } from './services/firebase.service';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideDatabase,getDatabase } from '@angular/fire/database';
+import { AngularFireModule } from '@angular/fire/compat';
+
+
+
 
 // The different pages I can route to
 const appRout: Routes = [
@@ -39,8 +47,10 @@ const appRout: Routes = [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(appRout),
+    AngularFireModule.initializeApp(environment.firebase),
+    provideDatabase(() => getDatabase()),
   ],
-  providers: [],
+  providers: [FirebaseService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

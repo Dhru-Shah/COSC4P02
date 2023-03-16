@@ -44,14 +44,12 @@ var mainUnityInstance;
 script.src = loaderUrl;
 script.id = 'unity';
 
-const data = {
-    name: 'Puffy',
-    description: 'the description',
-    longDescription: 'the long description',
-    imageOne: 'imageOne src',
-    imageTwo: 'imageTwo src',
-    imageThree: 'imageThree src'
-};
+const data = [
+    { 'Name': 'Sphere', 'Data': 'This is Sphere. Invented in 2001.' },
+    { 'Name': 'Artillery_V1', 'Data': 'This is Artillery_V1. Sounds very bad when fired.' },
+    { 'Name': 'BoatImage', 'Data': 'This is a war Boat. Boat has a hole init.' },
+    { 'Name': 'CycleImage', 'Data': 'This is a homologicus team cycle but they dont know how to ride it.' }
+]
 
 script.onload = () => {
     createUnityInstance(canvas, config, (progress) => {

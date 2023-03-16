@@ -48,7 +48,9 @@ const data = [
     { 'Name': 'Sphere', 'Data': 'This is Sphere. Invented in 2001.' },
     { 'Name': 'Artillery_V1', 'Data': 'This is Artillery_V1. Sounds very bad when fired.' },
     { 'Name': 'BoatImage', 'Data': 'This is a war Boat. Boat has a hole init.' },
-    { 'Name': 'CycleImage', 'Data': 'This is a homologicus team cycle but they dont know how to ride it.' }
+    { 'Name': 'CycleImage', 'Data': 'This is a homologicus team cycle but they dont know how to ride it.' },
+    { 'Name': 'Artillery_V2', 'Data': 'This is a homologicus artillery used to kill insects.' },
+    { 'Name': 'Mensa01', 'Data': 'This is Mensa01, accidently dropped from sky.' }
 ]
 
 script.onload = () => {

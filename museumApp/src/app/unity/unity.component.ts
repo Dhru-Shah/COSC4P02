@@ -1,5 +1,4 @@
 import { Component, OnInit, Input, OnDestroy } from '@angular/core';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'unity',
@@ -9,8 +8,14 @@ import { Router } from '@angular/router';
 export class UnityComponent implements OnInit {
   gameInstance: any;
 
-  constructor() { }
+  open: boolean = true;
+  dismissible: boolean = true;
+  timeout: number = 50000;
 
+  constructor() { }
+  log(alert: any) {
+    console.log('alert message closed');
+  }
   ngOnInit(): void {
 
     //grabbing the script to load the unity webgl

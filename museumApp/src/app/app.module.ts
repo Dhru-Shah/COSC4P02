@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
@@ -12,23 +11,24 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ToursComponent } from './tours/tours.component';
 import { UnityComponent } from './unity/unity.component';
 import { FirebaseService } from './services/firebase.service';
-import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
-import { provideDatabase,getDatabase } from '@angular/fire/database';
+import { provideDatabase, getDatabase } from '@angular/fire/database';
 import { AngularFireModule } from '@angular/fire/compat';
-
-
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AccordionModule } from 'ngx-bootstrap/accordion';
+import { AlertModule, AlertConfig } from 'ngx-bootstrap/alert';
 
 
 // The different pages I can route to
 const appRout: Routes = [
-  {path: '', component: HomeComponent},
-  {path: 'Home', component: HomeComponent}, 
-  {path: 'AboutUs', component: AboutComponent},
-  {path: 'Tours', component: ToursComponent},
-  {path: 'Catalogue', component: CatalogueComponent},
-  {path: 'Unity', component: UnityComponent},
-  {path: '**', component: ErrorComponent}
+  { path: '', component: HomeComponent },
+  { path: 'Home', component: HomeComponent },
+  { path: 'AboutUs', component: AboutComponent },
+  { path: 'Tours', component: ToursComponent },
+  { path: 'Catalogue', component: CatalogueComponent },
+  { path: 'Unity', component: UnityComponent },
+  { path: '**', component: ErrorComponent }
 ];
 
 
@@ -49,8 +49,11 @@ const appRout: Routes = [
     RouterModule.forRoot(appRout),
     AngularFireModule.initializeApp(environment.firebase),
     provideDatabase(() => getDatabase()),
+    NgbModule,
+    AccordionModule,
+    AlertModule
   ],
-  providers: [FirebaseService],
+  providers: [FirebaseService, AlertConfig],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

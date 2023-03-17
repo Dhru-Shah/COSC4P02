@@ -1,32 +1,38 @@
 <div class="container">
-  <div class="row">
 
-    <div class="tours-instructions">
-
-      <alert type="danger" [dismissible]="dismissible" [isOpen]="open" (onClosed)="log($event)"
-        [dismissOnTimeout]="timeout">
-        <h2 class="alert-heading">Please read this instructions first before you begin!</h2>
-        <p>Please, move closer to objects to hover/select using mouse.</p>
-        <p>Touchscreen users can touch the objects to select.</p>
-        <p class="tours-instructions-warning">Click "Exit" button to exit and navigate to different pages.</p>
-        <h2>Controls</h2>
-        <h3>Keyboard/Mouse</h3>
-        <ol>
-          <li>Mouse to rotate any direction.</li>
-          <li>W / Up Arrow to move forward.</li>
-          <li>S / Down Arrow to move backward.</li>
-          <li>A / Left Arrow to rotate/move left.</li>
-          <li>D / Right Arrow to rotate/move right.</li>
-        </ol>
-        <h3>Touchscreen</h3>
-        <ol>
-          <li>Joystick to move around.</li>
-          <li>Swipe screen to rotate.</li>
-        </ol>
-        <p>More features coming soon!</p>
-      </alert>
+  <ng-template #longContent let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title">Instructions</h4>
+      <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
     </div>
+    <div class="modal-body">
+      <p>Please, move closer to objects to hover/select using mouse.</p>
+      <p>Touchscreen users can touch the objects to select.</p>
+      <p class="tours-instructions-warning">Click "Exit" button to exit and navigate to different pages.</p>
+      <h2>Controls</h2>
+      <h3>Keyboard/Mouse</h3>
+      <ol>
+        <li>Mouse to rotate any direction.</li>
+        <li>W / Up Arrow to move forward.</li>
+        <li>S / Down Arrow to move backward.</li>
+        <li>A / Left Arrow to rotate/move left.</li>
+        <li>D / Right Arrow to rotate/move right.</li>
+      </ol>
+      <h3>Touchscreen</h3>
+      <ol>
+        <li>Joystick to move around.</li>
+        <li>Swipe screen to rotate.</li>
+      </ol>
+      <p>More features coming soon!</p>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-danger" (click)="modal.close('Close click')">Close</button>
+    </div>
+  </ng-template>
 
+  <div #modalButton class="btn btn-outline-warning mb-2 me-2" (click)="openLg(longContent)">Read Instructions</div>
+
+  <div class="row">
     <div id="unity-container" class="unity-desktop">
       <div class="d-flex justify-content-center">
         <canvas id="unity-canvas"></canvas>

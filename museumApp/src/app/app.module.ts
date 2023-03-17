@@ -12,6 +12,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ToursComponent } from './tours/tours.component';
 import { UnityComponent } from './unity/unity.component';
 
+
 // The different pages I can route to
 const appRout: Routes = [
   {path: '', component: HomeComponent},
@@ -19,7 +20,6 @@ const appRout: Routes = [
   {path: 'AboutUs', component: AboutComponent},
   {path: 'Tours', component: ToursComponent},
   {path: 'Catalogue', component: CatalogueComponent},
-  {path: 'Unity', component: UnityComponent},
   {path: '**', component: ErrorComponent}
 ];
 
@@ -32,15 +32,13 @@ const appRout: Routes = [
     ErrorComponent,
     HomeComponent,
     NavbarComponent,
-    ToursComponent,
-    UnityComponent
+    ToursComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(appRout),
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

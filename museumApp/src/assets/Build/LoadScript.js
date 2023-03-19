@@ -17,7 +17,7 @@ var config = {
     productName: "Room",
     productVersion: "0.1",
 };
-
+const joystick = { show: true }
 //find out different sizes
 if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
     var meta = document.createElement('meta');
@@ -27,6 +27,7 @@ if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
     container.className = "unity-mobile";
     canvas.className = "unity-mobile";
 } else {
+    joystick.show = false;
     //default sizes for desktop
     canvas.style.width = "960px";
     canvas.style.height = "600px";
@@ -53,6 +54,8 @@ const data = [
     { 'Name': 'Mensa01', 'Data': 'This is Mensa01, accidently dropped from sky.' }
 ]
 
+
+
 script.onload = () => {
     createUnityInstance(canvas, config, (progress) => {
         progressBarFull.style.width = 100 * progress + "%";
@@ -66,5 +69,36 @@ script.onload = () => {
         alert(message);
     });
 };
-//append the loaded script to the html body
+
+// function isInViewport(el) {
+//     const rect = el.getBoundingClientRect();
+//     return (
+//         rect.top >= 0 &&
+//         rect.left >= 0 &&
+//         rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+//         rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+//     );
+// }
+
+
+// //append the loaded script to the html body
 document.body.appendChild(script);
+
+// document.addEventListener('click', function () {
+//     if (window.location.pathname != "/Unity") {
+//         //var events = mainUnityInstance.Module.getJSEvents();
+//         if (events) {
+//             console.log("removing all events...");
+//             events.removeAllEventListeners();
+//             mainUnityInstance.Quit(function () {
+//                 console.log("done!");
+//             });
+//         }
+
+//         mainUnityInstance = null;
+
+//     }
+
+// }, {
+//     passive: true
+// });

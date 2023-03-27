@@ -1,85 +1,74 @@
-import { Component, OnInit, Input, OnDestroy } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, ElementRef, OnInit, ViewEncapsulation } from '@angular/core';
+import { } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { ViewChild } from '@angular/core';
+
 
 @Component({
   selector: 'unity',
   templateUrl: './unity.component.html',
-  styleUrls: ['./unity.component.scss']
+  styleUrls: ['./unity.component.scss'],
+  encapsulation: ViewEncapsulation.None,
+  styles: [
+    `
+			.dark-modal .modal-content {
+				background-color: #292b2c;
+				color: white;
+			}
+			.dark-modal .close {
+				color: white;
+			}
+			.light-blue-backdrop {
+				background-color: #5cb3fd;
+			}
+		`,
+  ],
 })
+
+
 export class UnityComponent implements OnInit {
   gameInstance: any;
 
-  constructor() { }
+  open: boolean = true;
+  dismissible: boolean = true;
+  timeout: number = 50000;
+  closeResult: string;
+  @ViewChild('modalButton') modalButton: ElementRef<HTMLElement>;
 
+  constructor(private modalService: NgbModal) { }
+
+  log(alert: any) {
+    console.log('alert message closed');
+  }
   ngOnInit(): void {
 
-    //grabbing the html elements to update the unity loader
-    var container: HTMLElement = document.querySelector("#unity-container");
-    var canvas: HTMLElement = document.querySelector("#unity-canvas");
-    var loadingBar: HTMLElement = document.querySelector("#unity-loading-bar");
-    var progressBarFull: HTMLElement = document.querySelector("#unity-progress-bar-full");
-    var fullscreenButton: HTMLElement = document.querySelector("#unity-fullscreen-button");
+    this.triggerFalseClick();
 
-    //grabbing the data built by unity/webgl
+    //grabbing the script to load the unity webgl
     var buildUrl = `/assets/Build`;
-    var loaderUrl = buildUrl + "/Room.loader.js";
-    var config = {
-      dataUrl: buildUrl + "/Room.data",
-      frameworkUrl: buildUrl + "/Room.framework.js",
-      codeUrl: buildUrl + "/Room.wasm",
-      streamingAssetsUrl: "StreamingAssets",
-      companyName: "DefaultCompany",
-      productName: "Room",
-      productVersion: "0.1",
-    };
-
-    //find out different sizes
-    if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-      var meta = document.createElement('meta');
-      meta.name = 'viewport';
-      meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
-      document.getElementsByTagName('head')[0].appendChild(meta);
-      container.className = "unity-mobile";
-      canvas.className = "unity-mobile";
-    } else {
-      //default sizes for desktop
-      canvas.style.width = "960px";
-      canvas.style.height = "600px";
-    }
-
-    //loading bar
-    loadingBar.style.display = "block";
+    var loaderUrl = buildUrl + "/LoadScript.js";
 
     //script that is displaying the build component from webgl
-    var script = document.createElement("script");
-    //instance of an unity webgl
-    var mainUnityInstance;
+    var scriptNew = document.createElement("script");
 
-    //load the script file from webgl
-    script.src = loaderUrl;
-    script.id = 'unity';
+    //load the script file for webgl
+    scriptNew.src = loaderUrl;
 
-    script.onload = () => {
-      this.gameInstance =
-        createUnityInstance(canvas, config, (progress: number) => {
-          progressBarFull.style.width = 100 * progress + "%";
-        }).then((unityInstance: { SetFullscreen: (arg0: number) => void; }) => {
-          loadingBar.style.display = "none";
-          fullscreenButton.onclick = () => {
-            unityInstance.SetFullscreen(1);
-          };
-          //creation of the main instance to do some tweeks
-          mainUnityInstance = unityInstance;
-        }).catch((message: any) => {
-          alert(message);
-        });
-    };
-    //append the loaded script to the html body
-    document.body.appendChild(script);
-
+    //add to body
+    document.body.appendChild(scriptNew);
   }
 
   ngOnDestroy(): void {
     this.gameInstance = null;
+  }
+
+  openLg(content: any) {
+    this.modalService.open(content, { size: 'lg' });
+  }
+
+  triggerFalseClick() {
+    setTimeout(() => {
+      this.modalButton.nativeElement.click();
+    }, 100);
   }
 }

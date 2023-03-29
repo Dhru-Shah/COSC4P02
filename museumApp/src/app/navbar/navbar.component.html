@@ -9,6 +9,9 @@
     >
     <span class="navbar-toggler-icon"></span>
   </button>
+  <div >
+    <p style="margin : auto 0px auto 25px; font-size: 15px;" id="NavbarNameID" ></p>
+  </div>
 
     <div class="collapse navbar-collapse" id="navmenu"> 
       <ul class="navbar-nav ms-auto"> 
@@ -16,11 +19,12 @@
         <li class="nav-item"><a href="#" class="nav-link" routerLink="Tours">Exhibit Tours</a></li>
         <li class="nav-item"><a href="#" class="nav-link" routerLink="Catalogue">Library Catalogue</a></li>
         <li class="nav-item"><a href="#" class="nav-link" routerLink="AboutUs">About Us</a></li>
-        <button class="btn btn-md m-1" style="background-color: #4B807E; color: #F3EDED;">Login</button>
-        <button class="btn btn-md m-1" style="background-color: #847768; color: #F3EDED">Register</button>
+        <button id="Login" class="btn btn-md m-1" a href= "" (click)="signInWithGoogle()" style="background-color: #4B807E; color: #F3EDED;">Login</button>
+        <button id="SignOut" class="btn btn-md m-1" a href= "" (click)="signOutWithGoogle()" style="background-color: #4B807E; color: #F3EDED; display: none;">Sign out</button>
 
       </ul>
     </div>
   
   </div>
+
 </nav>

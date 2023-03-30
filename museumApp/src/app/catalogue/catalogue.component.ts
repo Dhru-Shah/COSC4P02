@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FirebaseService } from '../services/firebase.service';
+import { FirebaseService } from '../services/services.service';
 import { Artifacts } from '../models/artifacts.model';
 import { map } from 'rxjs/operators';
 
@@ -29,5 +29,3 @@ export class CatalogueComponent implements OnInit {
     });
   }
 }
-
-

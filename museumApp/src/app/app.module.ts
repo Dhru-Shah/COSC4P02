@@ -19,7 +19,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AccordionModule } from 'ngx-bootstrap/accordion';
 import { AlertModule, AlertConfig } from 'ngx-bootstrap/alert';
 
-
 // The different pages I can route to
 const appRout: Routes = [
   { path: '', component: HomeComponent },

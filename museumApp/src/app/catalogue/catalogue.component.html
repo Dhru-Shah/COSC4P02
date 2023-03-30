@@ -1,4 +1,4 @@
-<div class="contentWrapper">
+<!-- <div class="contentWrapper">
     <div class="leftPane">
         <div class="filterPanel">
             <div class="searchBar">
@@ -15,7 +15,7 @@
         <div class="artifactListWrap">
             <div class="artifactCard" *ngFor="let artifact of artifacts">
                 <h5 class="artifactName">
-                    {{artifact.Artifact_name}}
+                    {{artifact.name}}
                 </h5>
                 <div class="artifactContent">
                     <div class="artifactImage">
@@ -23,10 +23,10 @@
                     </div>
                     <div class="artifactDetails">
                         <div class="artifactDate">
-                        <b>Age:</b> {{artifact.Age}}
+                        <b>Date:</b> //{{artifact.Age}}**Commment out after (if restored)
                         </div>
                         <div class="artifactCategory">
-                            <b>Category:</b> <br> {{artifact.Artifact_type}}
+                            <b>Category:</b> <br> {{artifact.category}}
                         </div>
                         <p class="artifactDescription">
                             <b>Description:</b> <br>
@@ -38,6 +38,81 @@
         </div>
     </div>
     <div class="rightPane">
+
+    </div>
+</div> -->
+<div class="bodyContent">
+    <div class="pageTitle">Artifact Catalogue</div>
+    <span id="filterPanel">
+        <label class="sectionTitle" for="collectionsCards"> Curated Collections:</label>
+        <div class="collections">
+            <div class="collectionCard" *ngFor="let artifact of artifacts">
+                <img src="assets/Images/museumImage.jpg" alt="{{artifact.Artifact_name}}" class="catImage">
+                <span class="catName"><label for="catName">{{artifact.Artifact_name}}</label></span>
+            </div>
+        </div>
+        <div class="searchFilters">
+
+            <div class="topFilt">
+                <div class="searchGroup">
+                    <input type="text" id="searchInput">
+                    <button id="searchButton"> Search</button>
+                </div>
+                <div class="dropdownMenus">
+                    <!-- <label for="categories">Category:</label> -->
+                    <select class="categoriesMenu" name="categories">
+                        <option value="null">Select Category</option>
+                        <option value="wars">Wars</option>
+                        <option value="culture">Culture</option>
+                        <option value="production/trade">Production/Trade</option>
+                        <option value="agriculture">Agriculture</option>
+                        <option value="science">science</option>
+                    </select>
+                    <!-- <label for="events">Events:</label> -->
+                    <select class="eventsMenu" name="events">
+                        <option value="null">Select Event</option>
+                        <option value="war of 1812">war of 1812</option>
+                        <option value="WW1">WW1</option>
+                        <option value="WW2">WW2</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="bottomFilt">
+                <div class="filterSorting">
+                    <button class="filterButton">Filters</button>
+                    <select class="sortMenu" name="sortMenu">
+                        <option value="default">Sort</option>
+                        <option value="oldestFirst">Age: Old to New</option>
+                        <option value="newsetFirst">Age: New to Old</option>
+                    </select>
+                </div>
+            </div>
+
+        </div>
+    </span>
+    <div id="artifactDisplay">
+
+        <div class="artifactCard" *ngFor="let artifact of artifacts">
+            <h5 class="artifactName">
+                {{artifact.Artifact_name}}
+            </h5>
+            <div class="artifactContent">
+                <div class="artifactImage">
+
+                </div>
+                <div class="artifactDetails">
+                    <div class="artifactDate">
+                    <b>Date:</b> {{artifact.Age}}
+                    </div>
+                    <div class="artifactCategory">
+                        <b>Category:</b> <br> {{artifact.Artifact_type}}
+                    </div>
+                    <p class="artifactDescription">
+                        <b>Description:</b> <br>
+                    </p>
+                </div>
+            </div>
 
     </div>
 </div>

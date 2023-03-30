@@ -47,8 +47,8 @@
         <label class="sectionTitle" for="collectionsCards"> Curated Collections:</label>
         <div class="collections">
             <div class="collectionCard" *ngFor="let artifact of artifacts">
-                <img src="assets/Images/museumImage.jpg" alt="{{artifact.name}}" class="catImage">
-                <span class="catName"><label for="catName">{{artifact.name}}</label></span>
+                <img src="assets/Images/museumImage.jpg" alt="{{artifact.Artifact_name}}" class="catImage">
+                <span class="catName"><label for="catName">{{artifact.Artifact_name}}</label></span>
             </div>
         </div>
         <div class="searchFilters">
@@ -95,7 +95,7 @@
 
         <div class="artifactCard" *ngFor="let artifact of artifacts">
             <h5 class="artifactName">
-                {{artifact.name}}
+                {{artifact.Artifact_name}}
             </h5>
             <div class="artifactContent">
                 <div class="artifactImage">
@@ -103,10 +103,10 @@
                 </div>
                 <div class="artifactDetails">
                     <div class="artifactDate">
-                    <b>Date:</b> <!--{{artifact.Age}}**Commment out after (if restored)-->
+                    <b>Date:</b> {{artifact.Age}}
                     </div>
                     <div class="artifactCategory">
-                        <b>Category:</b> <br> {{artifact.category}}
+                        <b>Category:</b> <br> {{artifact.Artifact_type}}
                     </div>
                     <p class="artifactDescription">
                         <b>Description:</b> <br>

@@ -10,14 +10,10 @@ import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ToursComponent } from './tours/tours.component';
 import { UnityComponent } from './unity/unity.component';
-import { FirebaseService } from './services/firebase.service';
-import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import { FirebaseService } from './services/services.service';
 import { environment } from '../environments/environment';
 import { provideDatabase, getDatabase } from '@angular/fire/database';
 import { AngularFireModule } from '@angular/fire/compat';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { AccordionModule } from 'ngx-bootstrap/accordion';
-import { AlertModule, AlertConfig } from 'ngx-bootstrap/alert';
 
 // The different pages I can route to
 const appRout: Routes = [
@@ -48,11 +44,8 @@ const appRout: Routes = [
     RouterModule.forRoot(appRout),
     AngularFireModule.initializeApp(environment.firebase),
     provideDatabase(() => getDatabase()),
-    NgbModule,
-    AccordionModule,
-    AlertModule
   ],
-  providers: [FirebaseService, AlertConfig],
+  providers: [FirebaseService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

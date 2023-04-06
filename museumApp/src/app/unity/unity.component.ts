@@ -59,7 +59,7 @@ export class UnityComponent implements OnInit {
   }
 
   ngOnDestroy(): void {
-    this.gameInstance = null;
+    // this.gameInstance = null;
   }
 
   openLg(content: any) {

@@ -70,35 +70,27 @@ script.onload = () => {
     });
 };
 
-// function isInViewport(el) {
-//     const rect = el.getBoundingClientRect();
-//     return (
-//         rect.top >= 0 &&
-//         rect.left >= 0 &&
-//         rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-//         rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-//     );
-// }
+
 
 
 // //append the loaded script to the html body
 document.body.appendChild(script);
 
-// document.addEventListener('click', function () {
-//     if (window.location.pathname != "/Unity") {
-//         //var events = mainUnityInstance.Module.getJSEvents();
-//         if (events) {
-//             console.log("removing all events...");
-//             events.removeAllEventListeners();
-//             mainUnityInstance.Quit(function () {
-//                 console.log("done!");
-//             });
-//         }
+document.addEventListener('click', function () {
+    if (window.location.pathname != "/Unity") {
+        //var events = mainUnityInstance.Module.getJSEvents();
+        if (events) {
+            console.log("removing all events...");
+            events.removeAllEventListeners();
+            mainUnityInstance.Quit(function () {
+                console.log("done!");
+            });
+        }
 
-//         mainUnityInstance = null;
+        mainUnityInstance = null;
 
-//     }
+    }
 
-// }, {
-//     passive: true
-// });
+}, {
+    passive: true
+});

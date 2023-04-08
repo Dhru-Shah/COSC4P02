@@ -66,7 +66,7 @@ $palePink: #E1B5A8;
     .enterExhibit-button {
         display: inline-flex;
         flex-direction: row;
-        border: 3px solid none;
+        border: 3px outset none;
         border-radius: 8px;
         background-color: #876942;
         color: white;
@@ -92,7 +92,7 @@ $palePink: #E1B5A8;
 .wrapper {
     display: flex;
     flex-direction: column;
-    background-color: $darkBlue;
+    background-color: #3B352E;
     align-content: center;
     height: fit-content;
 }
@@ -125,7 +125,7 @@ $palePink: #E1B5A8;
 .exhibits {
     display: block;
     height: 100vh;
-    background-color: $darkBlue;
+    background-color: #3B352E;
 }
 
 .searchBar {

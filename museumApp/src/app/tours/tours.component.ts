@@ -1,8 +1,8 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { SwiperComponent } from "swiper/angular";
 
-import SwiperCore, { EffectCoverflow, Pagination, Autoplay, Navigation } from "swiper";
-SwiperCore.use([EffectCoverflow, Pagination, Autoplay, Navigation]);
+import SwiperCore, { EffectCoverflow, Pagination, Autoplay, Navigation, Mousewheel, Lazy } from "swiper";
+SwiperCore.use([EffectCoverflow, Pagination, Autoplay, Navigation, Mousewheel, Lazy]);
 
 @Component({
   selector: 'app-tours',

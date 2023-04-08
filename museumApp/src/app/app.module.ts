@@ -14,6 +14,7 @@ import { FirebaseService } from './services/services.service';
 import { environment } from '../environments/environment';
 import { provideDatabase, getDatabase } from '@angular/fire/database';
 import { AngularFireModule } from '@angular/fire/compat';
+import { SwiperModule } from 'swiper/angular';
 
 // The different pages I can route to
 const appRout: Routes = [
@@ -39,6 +40,7 @@ const appRout: Routes = [
     UnityComponent
   ],
   imports: [
+    SwiperModule,
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(appRout),

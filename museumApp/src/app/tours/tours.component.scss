@@ -1,11 +1,15 @@
 $darkBlue: #35374F;
 $paleGray: #D9D9D9;
 $palePink: #E1B5A8;
+$darkBrown:#3B352E;
+$mediumBrown:#876942;
+$lightBrown:#C6B49C;
+$accentBrown: #BA915B;
 
 .swiper {
     width: 100%;
     // padding-top: 10rem;
-    padding-bottom: 10rem;
+    //padding-bottom: 10rem;
 
     .swiper-button-prev,
     .swiper-button-next {
@@ -14,7 +18,9 @@ $palePink: #E1B5A8;
         height: 5rem;
         border-radius: 50%;
         color: rgb(244, 245, 220);
-        margin-top: 15rem;
+        border: 2px solid black;
+        box-shadow: 3px 3px 6px rgba(0,0,0,0.5), inset 2px 2px 4px  rgba(200,200,200,0.5), inset -2px -2px 4px rgba(0,0,0,0.5);
+        // margin-top: 15rem;
     }
 }
 
@@ -29,6 +35,10 @@ $palePink: #E1B5A8;
     background-color: #C6B49C;
     padding: 3rem;
     display: block;
+    border: 2px solid black;
+    border-radius: 8px;
+
+    box-shadow: 3px 3px 6px rgba(0,0,0,0.5), inset -3px -3px 6px rgba(0,0,0,0.5), inset 3px 3px 6px rgba(256,256,256,0.5);
 
     .exhibit-name {
         align-items: center;
@@ -66,7 +76,8 @@ $palePink: #E1B5A8;
     .enterExhibit-button {
         display: inline-flex;
         flex-direction: row;
-        border: 3px outset none;
+        border: 3px outset black;
+        box-shadow: inset -2px -2px 4px rgba(0,0,0,0.5), inset 2px 2px 4px rgba(200,200,200,0.5);
         border-radius: 8px;
         background-color: #876942;
         color: white;
@@ -95,15 +106,19 @@ $palePink: #E1B5A8;
     background-color: #3B352E;
     align-content: center;
     height: fit-content;
+    background: radial-Gradient(circle at 0vh, $darkBrown,transparent), radial-gradient(circle at 10vh, $lightBrown, transparent ), radial-gradient(circle at 90vh, black, transparent);
+
 }
 
 .categories {
     display: flex;
     flex-direction: row;
-    background-color: $paleGray;
+    background-color: $lightBrown;
     align-items: center;
     padding: 0.5rem;
     padding-left: 1rem !important;
+    background: radial-Gradient(circle at 0vw, $accentBrown,transparent), radial-gradient(circle at 40vw, $lightBrown transparent ), radial-gradient(circle at 100vw, $darkBrown, transparent);
+
 
     .categoryName {
         display: inline-flexbox;
@@ -124,7 +139,8 @@ $palePink: #E1B5A8;
 
 .exhibits {
     display: block;
-    height: 100vh;
+    height: fit-content;
+    padding: 25px;
     background-color: #3B352E;
 }
 

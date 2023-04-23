@@ -118,20 +118,22 @@ $accentBrown: #BA915B;
     padding: 0.5rem;
     padding-left: 1rem !important;
     background: radial-Gradient(circle at 0vw, $accentBrown,transparent), radial-gradient(circle at 40vw, $lightBrown transparent ), radial-gradient(circle at 100vw, $darkBrown, transparent);
-
-
+    font-weight: 500;
+    font-size: larger;
     .categoryName {
         display: inline-flexbox;
         margin: 0.5rem;
         padding: 1rem;
         border: 1px solid black;
-        background-color: white;
+        background-color: $darkBrown;
+        color:$lightBrown;
         border-radius: 8px;
-        font-weight: 600;
+        font-weight: 600 !important;
+        font-size: medium !important;
         cursor: pointer;
 
         &:hover {
-            background-color: $darkBlue;
+            background-color: $accentBrown;
             color: white;
         }
     }

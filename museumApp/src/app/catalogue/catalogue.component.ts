@@ -32,7 +32,7 @@ export class CatalogueComponent implements OnInit {
 
   public searchChange() {
     this.searchTerm = (document.getElementById('searchInput') as HTMLInputElement).value;
-    this.artifacts.filter(artifact => artifact.Artifact_name.includes(this.searchTerm.toString()));
+    this.artifacts.filter(artifact => artifact.Name.includes(this.searchTerm.toString()));
     console.log(this.searchTerm);
   }
 }

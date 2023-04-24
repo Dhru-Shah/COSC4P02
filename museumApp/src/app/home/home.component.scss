@@ -1,0 +1,92 @@
+
+.d-sm-flex, .d-lg-flex{
+    gap:50px;
+}
+#Experience{
+
+    background-color: rgb(52, 52, 72);
+}
+.navBar ul li a:hover {
+    color: red;
+}
+
+body {
+    font-family: 'Mulish', sans-serif;
+}
+
+
+
+
+#learnMore {
+    background-color: #F3EDED;
+    height: 500px;
+}
+
+
+
+.scrollToLearn{
+    height: 130;
+    padding-top: 20px;
+    text-align: center;
+    font-family: 'Mulish';
+    font-size: 20;
+    letter-spacing: 0.1px;
+    line-height: 40px;
+}
+
+.down-arrow {
+    position: absolute;
+    top: calc(100vh - 80px);
+    left: calc(50% - 14px);
+    width: 0;
+    height: 30px;
+    border: 2px solid;
+    border-radius: 2px;
+    animation: jumpInfinite 1.5s infinite;
+  }
+  
+  .down-arrow:after {
+    content: " ";
+    position: absolute;
+    top: 10.5px;
+    left: -8px;
+    width: 16px;
+    height: 16px;
+    border-bottom: 4px solid;
+    border-right: 4px solid;
+    border-radius: 4px;
+    transform: rotateZ(45deg);
+  }
+  
+  @keyframes jumpInfinite {
+    0% {
+      margin-top: 0;
+    }
+    50% {
+      margin-top: 20px;
+    }
+    100% {
+      margin-top: 0;
+    }
+  }
+  a{
+    text-decoration: none;
+    color:white;
+  }
+  .btn-primary-outline {
+    background-color: transparent;
+    border-color: white;
+    color: white;
+    border-radius: 0%;
+    
+  }
+  .btn-primary-green{
+    background-color: #4B807E;
+    color: white;
+    border-radius: 0%;
+  }
+  .on-Click:not(:disabled):not(:disabled):active {
+    background-color: darkgrey;
+ } 
+  
+  

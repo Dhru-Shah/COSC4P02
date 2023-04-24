@@ -1,0 +1,53 @@
+<div class="container">
+
+  <ng-template #longContent let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title">Instructions</h4>
+      <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+    </div>
+    <div class="modal-body">
+      <p>Please, move closer to objects to hover/select using mouse.</p>
+      <p>Touchscreen users can touch the objects to select.</p>
+      <p class="tours-instructions-warning">Click "Exit" button to exit and navigate to different pages.</p>
+      <h2>Controls</h2>
+      <h3>Keyboard/Mouse</h3>
+      <ol>
+        <li>Mouse to rotate any direction.</li>
+        <li>W / Up Arrow to move forward.</li>
+        <li>S / Down Arrow to move backward.</li>
+        <li>A / Left Arrow to rotate/move left.</li>
+        <li>D / Right Arrow to rotate/move right.</li>
+      </ol>
+      <h3>Touchscreen</h3>
+      <ol>
+        <li>Joystick to move around.</li>
+        <li>Swipe screen to rotate.</li>
+      </ol>
+      <p>More features coming soon!</p>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-danger" (click)="modal.close('Close click')">Close</button>
+    </div>
+  </ng-template>
+
+  <div #modalButton class="btn btn-outline-info mb-2 me-2" (click)="openLg(longContent)">Read Instructions</div>
+
+  <div class="row">
+    <div id="unity-container" class="unity-desktop">
+      <div class="d-flex justify-content-center">
+        <canvas id="unity-canvas"></canvas>
+      </div>
+      <div id="unity-loading-bar">
+        <div id="unity-progress-bar-empty">
+          <div id="unity-progress-bar-full"></div>
+        </div>
+      </div>
+      <div id="unity-warning"> </div>
+      <div id="unity-footer">
+        <div id="unity-webgl-logo"></div>
+        <div id="unity-fullscreen-button"></div>
+        <div id="unity-build-title">Homologicus</div>
+      </div>
+    </div>
+  </div>
+</div>

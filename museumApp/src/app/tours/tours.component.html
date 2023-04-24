@@ -1,7 +1,9 @@
 <div class="wrapper">
     <div class="categories">
         Categories:
-        <div class="categoryName" *ngFor="let category of [{name:'All Categories'},{name:'Wars'},{name:'Production/Trade'}]">{{category.name}}</div>
+        <div class="categoryName"
+            *ngFor="let category of [{name:'All Categories'},{name:'Wars'},{name:'Production/Trade'}]">{{category.name}}
+        </div>
     </div>
     <div class="exhibits">
         <div class="searchBar">
@@ -10,20 +12,51 @@
                 <span class="searchText">Search</span>
             </div>
         </div>
-        <div class="contentWrap">
-        <div class="detailsOverview">
-            <div class="carousel-button"> < </div>
-                <div class="exhibit-cards">
-                    <div class="exhibitDetails" *ngFor="let exhibit of exhibitDetails">
-                        <div class="exhibitText">
-                            <h3>{{exhibit.name}}</h3>
-                            <p>{{exhibit.details}}</p>
+        <!-- <div class="contentWrap">
+            <div class="detailsOverview">
+                <div class="carousel-button">
+                    < </div>
+                        <div class="exhibit-cards">
+                            <div class="exhibitDetails" *ngFor="let exhibit of exhibitDetails">
+                                <div class="exhibitText">
+                                    <h3>{{exhibit.name}}</h3>
+                                    <p>{{exhibit.details}}</p>
+                                </div>
+                                <div class="enterExhibit-button">
+                                    <a href="Unity" class="enterExhibit-text">Enter Exhibit</a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="enterExhibit-button"><a href="Unity" class="enterExhibit-text">Enter Exhibit</a></div>
+                        <div class="carousel-button"> > </div>
+                </div>
+            </div>
+        </div> -->
+        <swiper [effect]="'coverflow'" [grabCursor]="true" [centeredSlides]="true" [slidesPerView]="'auto'"
+            [coverflowEffect]="{
+  rotate: 0,
+  stretch: 0,
+  depth: 250,
+  modifier: 1,
+  slideShadows: true
+}" [spaceBetween]="100" [loop]="true" [autoplay]="false" [navigation]="true" class="mySwiper">
+            <ng-template swiperSlide *ngFor="let exhibit of exhibitDetails">
+                <div class="exhibitDetails">
+                    <div class="exhibitText">
+                        <div class="exhibit-introduction">
+                            <h6>{{exhibit.name}}</h6>
+                            <button class="exhibit-like-button">like</button>
+                        </div>
+                        <img src="../../assets/Images/museumImage.jpg" />
+                        <h3 class="exhibit-name">{{exhibit.name}}</h3>
+                        <p>{{exhibit.details}}</p>
+                    </div>
+                    <div class="exhibit-details-end">
+                        <h6>Contains 12 artifacts</h6>
+                        <div class="enterExhibit-button">
+                            <a href="Unity" class="enterExhibit-text">Enter Exhibit</a>
+                        </div>
                     </div>
                 </div>
-            <div class="carousel-button"> > </div>
-        </div>
+            </ng-template>
+        </swiper>
     </div>
-    </div>
-</div>

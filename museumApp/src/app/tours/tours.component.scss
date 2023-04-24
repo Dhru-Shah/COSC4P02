@@ -2,23 +2,110 @@ $darkBlue: #35374F;
 $paleGray: #D9D9D9;
 $palePink: #E1B5A8;
 
+.swiper {
+    width: 100%;
+    // padding-top: 10rem;
+    padding-bottom: 10rem;
 
-.wrapper{
-    display:flex;
-    flex-direction: column;
-    background-color: $darkBlue;
-    align-content: center;
-    height:fit-content;
+    .swiper-button-prev,
+    .swiper-button-next {
+        background-color: #876942;
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+        color: rgb(244, 245, 220);
+        margin-top: 15rem;
+    }
 }
 
-.categories{
-    display:flex;
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 30rem;
+    //height: 30rem;
+}
+
+.swiper-slide .exhibitDetails {
+    background-color: #C6B49C;
+    padding: 3rem;
+    display: block;
+
+    .exhibit-name {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        margin: 1rem;
+    }
+
+    .exhibit-introduction {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 1rem;
+
+        .exhibit-like-button {
+            border-color: white;
+            padding: .5rem;
+            border-radius: 50%;
+        }
+    }
+
+    .exhibit-details-end {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    img {
+        display: block;
+        width: 100%;
+    }
+
+
+    .enterExhibit-button {
+        display: inline-flex;
+        flex-direction: row;
+        border: 3px outset none;
+        border-radius: 8px;
+        background-color: #876942;
+        color: white;
+        justify-content: center;
+        cursor: pointer;
+        width: 10rem;
+        align-self: center;
+        padding: 0.5rem;
+
+        .enterExhibit-text {
+            text-decoration: none;
+            color: white;
+            width: fit-content;
+        }
+
+        &:hover {
+            background-color: #665135;
+            color: white;
+        }
+    }
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    background-color: #3B352E;
+    align-content: center;
+    height: fit-content;
+}
+
+.categories {
+    display: flex;
     flex-direction: row;
     background-color: $paleGray;
     align-items: center;
     padding: 0.5rem;
     padding-left: 1rem !important;
-    .categoryName{
+
+    .categoryName {
         display: inline-flexbox;
         margin: 0.5rem;
         padding: 1rem;
@@ -26,67 +113,72 @@ $palePink: #E1B5A8;
         background-color: white;
         border-radius: 8px;
         font-weight: 600;
-        cursor:pointer;
-        &:hover{
-           background-color: $darkBlue;
-           color: white;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $darkBlue;
+            color: white;
         }
     }
 }
 
-.exhibits{
+.exhibits {
     display: block;
     height: 100vh;
-    background-color: $darkBlue;
+    background-color: #3B352E;
 }
 
-.searchBar{
-    display:flex;
+.searchBar {
+    display: flex;
     flex-direction: row;
     height: max-content;
-    margin:2rem;
-    input{
+    margin: 2rem;
+
+    input {
         border-top-left-radius: 8px;
         border-bottom-left-radius: 8px;
-        border:2px solid black;
+        border: 2px solid black;
         width: 25rem;
         font-size: large;
         padding: 10px;
     }
-    .search-button{
-        display:flex;
+
+    .search-button {
+        display: flex;
         border: 2px solid black;
-        background:$paleGray;
+        background: $paleGray;
         height: 4rem;
         margin: 0% !important;
-        padding:1rem;
+        padding: 1rem;
         align-items: center;
-        cursor:pointer;
+        cursor: pointer;
         border-top-right-radius: 8px;
         border-bottom-right-radius: 8px;
         font-size: large;
-        &:hover{
+
+        &:hover {
             background-color: gray;
             color: #D9D9D9;
         }
     }
 }
 
-.contentWrap{
-    display:inline-block;
+.contentWrap {
+    display: inline-block;
     width: 100%;
     height: fit-content;
     padding-top: 5rem;
     background-color: $darkBlue;
 }
 
-.detailsOverview{
-    display:flex;
+.detailsOverview {
+    display: flex;
     //padding: 5rem;
     align-items: center;
-    .carousel-button{
-        display:inline-block;
-        padding:0.5rem;
+
+    .carousel-button {
+        display: inline-block;
+        padding: 0.5rem;
         border: 2px solid black;
         background-color: $paleGray;
         margin: 0.5rem;
@@ -94,48 +186,57 @@ $palePink: #E1B5A8;
         font-weight: bold;
         font-size: large;
         cursor: pointer;
-        
-        &:hover{
+
+        &:hover {
             background-color: gray;
             color: #D9D9D9;
         }
     }
-    .exhibit-cards{
-        display:inline-flex;
-        border:3px solid black;
+
+    .exhibit-cards {
+        display: inline-flex;
+        border: 3px solid black;
         border-radius: 8px;
-        overflow-x:scroll;
+        overflow-x: scroll;
+
         &::-webkit-scrollbar {
             background: none;
-          }
-        &::-webkit-scrollbar-thumb{
+        }
+
+        &::-webkit-scrollbar-thumb {
             background-color: gray;
             border-radius: 8px;
         }
+
         width: 90vw;
         height: fit-content;
-        .exhibitDetails{
-            display:flex;
+
+        .exhibitDetails {
+            display: flex;
             flex-direction: column;
-            padding:1rem;
-            margin:1rem;
-            border:2px solid black;
+            padding: 1rem;
+            margin: 1rem;
+            border: 2px solid black;
             border-radius: 8px;
             background-color: $palePink;
             color: $darkBlue;
             height: fit-content;
             justify-content: center;
-            h3{
+
+            h3 {
                 text-align: center;
                 margin-bottom: 2rem;
             }
-            p{
+
+            p {
                 text-indent: 1rem;
             }
-            .exhibitText{
-                margin:1rem;
+
+            .exhibitText {
+                margin: 1rem;
             }
-            .enterExhibit-button{
+
+            .enterExhibit-button {
                 display: inline-flex;
                 flex-direction: row;
                 border: 3px solid black;
@@ -146,15 +247,17 @@ $palePink: #E1B5A8;
                 cursor: pointer;
                 width: 10rem;
                 align-self: center;
-                padding:0.5rem;
+                padding: 0.5rem;
                 margin-right: 3rem;
                 margin-left: 3rem;
-                .enterExhibit-text{
+
+                .enterExhibit-text {
                     text-decoration: none;
                     color: white;
                     width: fit-content;
                 }
-                &:hover{
+
+                &:hover {
                     background-color: darkred;
                     color: white;
                 }

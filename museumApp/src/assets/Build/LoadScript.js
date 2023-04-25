@@ -52,13 +52,43 @@ script.src = loaderUrl;
 script.id = 'unity';
 
 const data = [
-    { 'Name': 'Sphere', 'Data': 'This is Sphere. Invented in 2001.' },
-    { 'Name': 'Artillery_V1', 'Data': 'This is Artillery_V1. Sounds very bad when fired.' },
-    { 'Name': 'BoatImage', 'Data': 'This is a war Boat. Boat has a hole init.' },
-    { 'Name': 'CycleImage', 'Data': 'This is a homologicus team cycle but they dont know how to ride it.' },
-    { 'Name': 'Artillery_V2', 'Data': 'This is a homologicus artillery used to kill insects.' },
-    { 'Name': 'Mensa01', 'Data': 'This is Mensa01, accidently dropped from sky.' }
+    { 'Name': 'VictoriaBust', 'Date': '1990', 'Description': 'This is Description for Victoria Bust.' },
+    { 'Name': 'Sphere', 'Date': '1990', 'Description': 'This is Description for Sphere.' },
+    { 'Name': 'Artillery_V1', 'Date': '1990', 'Description': 'This is Description for Artillery_V1.' },
+    { 'Name': 'letter', 'Date': '1990', 'Description': 'This is Description for letter.' },
+    { 'Name': 'Coin1', 'Date': '1990', 'Description': 'This is Description for Coin1.' },
+    { 'Name': 'Coin2', 'Date': '1990', 'Description': 'This is Description for Coin2.' },
+    { 'Name': 'Coin3', 'Date': '1990', 'Description': 'This is Description for Coin3.' },
+    { 'Name': 'Coin4', 'Date': '1990', 'Description': 'This is Description for Coin4.' },
+    { 'Name': 'Coin5', 'Date': '1990', 'Description': 'This is Description for Coin5.' },
+    { 'Name': 'Coin6', 'Date': '1990', 'Description': 'This is Description for Coin6.' },
+    { 'Name': 'Uniform', 'Date': '1990', 'Description': 'This is Description for Uniform1.' },
+    { 'Name': 'Uniform2', 'Date': '1990', 'Description': 'This is Description for Uniform2.' },
+    { 'Name': 'Image2', 'Date': '1990', 'Description': 'This is Description for Potrait.' },
+    { 'Name': 'Painting1', 'Date': '1990', 'Description': 'This is Description for Painting1.' },
+    { 'Name': 'Painting2', 'Date': '1990', 'Description': 'This is Description for Painting2.' },
+    { 'Name': 'Painting3', 'Date': '1990', 'Description': 'This is Description for Painting3.' },
+    { 'Name': 'Painting4', 'Date': '1990', 'Description': 'This is Description for Painting4.' },
+    { 'Name': 'Painting5', 'Date': '1990', 'Description': 'This is Description for Painting5.' },
+    { 'Name': 'Painting6', 'Date': '1990', 'Description': 'This is Description for Painting6.' },
+    { 'Name': 'Painting7', 'Date': '1990', 'Description': 'This is Description for Painting7.' },
+    { 'Name': 'Painting8', 'Date': '1990', 'Description': 'This is Description for Painting8.' },
+    { 'Name': 'Painting9', 'Date': '1990', 'Description': 'This is Description for Painting9.' },
+    { 'Name': 'Painting10', 'Date': '1990', 'Description': 'This is Description for Painting10.' },
+    { 'Name': 'Painting11', 'Date': '1990', 'Description': 'This is Description for Painting11.' },
+    { 'Name': 'Painting12', 'Date': '1990', 'Description': 'This is Description for Painting12.' },
+    { 'Name': 'Painting13', 'Date': '1990', 'Description': 'This is Description for Painting13.' },
+    { 'Name': 'Painting14', 'Date': '1990', 'Description': 'This is Description for Painting14.' },
+    { 'Name': 'Painting15', 'Date': '1990', 'Description': 'This is Description for Painting15.' },
+    { 'Name': 'Painting16', 'Date': '1990', 'Description': 'This is Description for Painting16.' },
+    { 'Name': 'Painting17', 'Date': '1990', 'Description': 'This is Description for Painting17.' },
+    { 'Name': 'Painting18', 'Date': '1990', 'Description': 'This is Description for Painting18.' },
+    { 'Name': 'Painting19', 'Date': '1990', 'Description': 'This is Description for Painting19.' },
+    { 'Name': 'Potrait3', 'Date': '1990', 'Description': 'This is Description for Potrait3.' },
+    { 'Name': 'Coinboard', 'Date': '1990', 'Description': '' }
 ]
+
+console.log(this.artifacts);
 
 document.addEventListener('click', function () {
     if (window.location.pathname != "/Unity") {

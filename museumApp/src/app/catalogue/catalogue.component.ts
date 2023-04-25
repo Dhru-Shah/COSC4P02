@@ -27,6 +27,7 @@ export class CatalogueComponent implements OnInit {
       )
     ).subscribe(data => {
       this.artifacts = data;
+      console.log(this.artifacts);
     });
   }
 

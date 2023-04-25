@@ -54,6 +54,7 @@ script.id = 'unity';
 const data = [
     { 'Name': 'VictoriaBust', 'Date': '1990', 'Description': 'This is Description for Victoria Bust.' },
     { 'Name': 'Sphere', 'Date': '1990', 'Description': 'This is Description for Sphere.' },
+    { 'Name': 'Artillery_V2', 'Date': '1990', 'Description': 'This is Description for Artillery_V2.' },
     { 'Name': 'Artillery_V1', 'Date': '1990', 'Description': 'This is Description for Artillery_V1.' },
     { 'Name': 'letter', 'Date': '1990', 'Description': 'This is Description for letter.' },
     { 'Name': 'Coin1', 'Date': '1990', 'Description': 'This is Description for Coin1.' },
@@ -85,7 +86,11 @@ const data = [
     { 'Name': 'Painting18', 'Date': '1990', 'Description': 'This is Description for Painting18.' },
     { 'Name': 'Painting19', 'Date': '1990', 'Description': 'This is Description for Painting19.' },
     { 'Name': 'Potrait3', 'Date': '1990', 'Description': 'This is Description for Potrait3.' },
-    { 'Name': 'Coinboard', 'Date': '1990', 'Description': '' }
+    { 'Name': 'Coinboard', 'Date': '1990', 'Description': '' },
+    { 'Name': 'Amphora02Stand', 'Date': '1990', 'Description': ' of Amphora02Stand' },
+    { 'Name': 'Lucerna', 'Date': '1990', 'Description': 'for the piece of Lucerna' },
+    { 'Name': 'Amphora01', 'Date': '1990', 'Description': 'for the piece of Amphora01' },
+    { 'Name': 'Mensa01', 'Date': '1990', 'Description': 'for the piece of Mensa01' },
 ]
 
 console.log(this.artifacts);

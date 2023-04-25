@@ -28,4 +28,14 @@ export class ToursComponent {
     { name: 'Exhibit #11', details: 'This is some filler text where the detailed description of the exhibit should go' },
   ];
 
+  categories = [
+    {name:'All Categories'},
+    {name:'Wars'},
+    {name:'Production/Trade'},
+    {name:'Agriculture'},
+    {name:'Weapons'},
+    {name:'Global Relations'},
+    {name:'Government'},
+  ];
+
 }

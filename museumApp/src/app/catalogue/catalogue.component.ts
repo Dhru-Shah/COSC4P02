@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FirebaseService } from '../services/services.service';
 import { Artifacts } from '../models/artifacts.model';
 import { map } from 'rxjs/operators';
@@ -9,7 +9,8 @@ import { map } from 'rxjs/operators';
   styleUrls: ['./catalogue.component.scss']
 })
 export class CatalogueComponent implements OnInit {
-  artifacts: Artifacts[]
+  artifacts: Artifacts[];
+  searchTerm: String;
 
   constructor(public service: FirebaseService) { }
 
@@ -27,5 +28,11 @@ export class CatalogueComponent implements OnInit {
     ).subscribe(data => {
       this.artifacts = data;
     });
+  }
+
+  public searchChange() {
+    this.searchTerm = (document.getElementById('searchInput') as HTMLInputElement).value;
+    this.artifacts.filter(artifact => artifact.Name.includes(this.searchTerm.toString()));
+    console.log(this.searchTerm);
   }
 }

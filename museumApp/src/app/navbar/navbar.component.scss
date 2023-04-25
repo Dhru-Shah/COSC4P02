@@ -1,0 +1,18 @@
+$darkBlue: #35374F;
+$paleGray: #D9D9D9;
+$palePink: #E1B5A8;
+$darkBrown:#3B352E;
+$mediumBrown:#876942;
+$lightBrown:#C6B49C;
+$accentBrown: #BA915B;
+
+li{
+    a{
+        color: white !important;
+        font-weight: 500;
+    }
+}
+
+nav{
+    background: radial-Gradient(circle at 0vw, $darkBrown, transparent), radial-gradient(circle at 20vw, $accentBrown, transparent ), radial-gradient(circle at 80vw, $darkBrown, transparent);
+}

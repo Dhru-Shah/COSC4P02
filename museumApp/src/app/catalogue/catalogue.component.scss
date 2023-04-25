@@ -238,10 +238,34 @@ $accentBrowm: #BA915B;
     border-radius: 8px;
     box-shadow: 5px 5px 10px $darkBrown, -2px -2px 3px inset $darkBrown, 1px 2px 6px inset $lightBrown;
     //box-shadow: ;
+
+        
+        ::-webkit-scrollbar{
+            // display: none;
+            display:block !important;  
+            background: rgba(256,256,256,0%);
+            width: 10px;
+            padding: 10rem !important;
+        }
+
+        ::-webkit-scrollbar-thumb{
+            // display: none;
+            background: $darkBrown;
+            border-radius: 10px;
+            border-right: 1px inset $mediumBrown;
+        }
+
+        ::-webkit-scrollbar-track{
+            // display: none;
+            margin: 1rem;
+        }
+
+
         .artifactContent{
             display: flex;
             flex-direction: row;
             height: 80%;
+            overflow-y: scroll;
         }
         .artifactName{
             display: block;
@@ -266,6 +290,7 @@ $accentBrowm: #BA915B;
             width: 50%;
             word-wrap: break-word;
             margin:3%;
+            text-overflow:ellipsis;
             //border:1px solid black;
             
         }

@@ -4,8 +4,8 @@
         <label class="sectionTitle" for="collectionsCards"> Curated Collections:</label>
         <div class="collections">
             <div class="collectionCard" *ngFor="let artifact of artifacts">
-                <img src="assets/Images/museumImage.jpg" alt="{{artifact.Artifact_name}}" class="catImage">
-                <span class="catName"><label for="catName">{{artifact.Artifact_name}}</label></span>
+                <img src="assets/Images/museumImage.jpg" alt="{{artifact.Name}}" class="catImage">
+                <span class="catName"><label for="catName">{{artifact.Name}}</label></span>
             </div>
         </div>
         <div class="searchFilters">
@@ -13,7 +13,7 @@
             <div class="topFilt">
                 <div class="searchGroup">
                     <input type="text" id="searchInput">
-                    <button id="searchButton"> Search</button>
+                    <button id="searchButton" (click)="searchChange()"> Search</button>
                 </div>
                 <div class="dropdownMenus">
                     <!-- <label for="categories">Category:</label> -->
@@ -52,7 +52,7 @@
 
         <div class="artifactCard" *ngFor="let artifact of artifacts">
             <h5 class="artifactName">
-                {{artifact.Artifact_name}}
+                {{artifact.Name}}
             </h5>
             <div class="artifactContent">
                 <div class="artifactImage">
@@ -60,13 +60,13 @@
                 </div>
                 <div class="artifactDetails">
                     <div class="artifactDate">
-                    <b>Date:</b> <!--{{artifact.Age}}**Commment out after (if restored)-->
+                    <b>Date:</b> {{artifact.Date}}
                     </div>
                     <div class="artifactCategory">
-                        <b>Category:</b> <br> {{artifact.Artifact_type}}
+                        <b>Category:</b> <br>
                     </div>
                     <p class="artifactDescription">
-                        <b>Description:</b> <br>
+                        <b>Description:</b> {{artifact.Description}} <br>
                     </p>
                 </div>
             </div>

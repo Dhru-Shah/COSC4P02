@@ -1,10 +1,14 @@
+.unity-room-container {
+    background-color: #C6B49C;
+}
+
 #unity-container.unity-mobile {
     width: 100%;
     height: 100%
 }
 
 #unity-canvas {
-    background: #231F20
+    background: #231F20;
 }
 
 .unity-mobile #unity-canvas {
@@ -27,14 +31,14 @@
     height: 18px;
     margin-top: 10px;
     margin-left: 6.5px;
-    background: url('./TemplateData/progress-bar-full-light.png') no-repeat center
+    background: url('./TemplateData/progress-bar-empty-dark.png') no-repeat center
 }
 
 #unity-progress-bar-full {
     width: 0%;
     height: 18px;
     margin-top: 10px;
-    background: url('./TemplateData/progress-bar-empty-light.png') no-repeat center
+    background: url('./TemplateData/progress-bar-full-light.png') no-repeat center
 }
 
 #unity-footer {
@@ -83,4 +87,66 @@
     .tours-instructions-warning {
         color: red;
     }
+}
+
+.unity-instructions-button {
+    animation: shake-animation 4.72s ease infinite;
+    transform-origin: 50% 50%;
+    border-color: #3B352E;
+    background-color: #3B352E;
+    color: #C6B49C;
+    font-size: 2rem;
+}
+
+@keyframes shake-animation {
+    0% {
+        transform: translate(0, 0)
+    }
+
+    1.78571% {
+        transform: translate(1rem, 0)
+    }
+
+    3.57143% {
+        transform: translate(0, 0)
+    }
+
+    5.35714% {
+        transform: translate(1rem, 0)
+    }
+
+    7.14286% {
+        transform: translate(0, 0)
+    }
+
+    8.92857% {
+        transform: translate(1rem, 0)
+    }
+
+    10.71429% {
+        transform: translate(0, 0)
+    }
+
+    100% {
+        transform: translate(0, 0)
+    }
+}
+
+.unity-instructions-button:hover {
+    background-color: #876942;
+    color: #D7D7D7;
+}
+
+.modal-header {
+    background-color: #C6B49C;
+}
+
+.modal-body {
+    background-color: #3B352E;
+    color: #C6B49C;
+    font-size: 1.5rem;
+}
+
+.modal-footer {
+    background-color: #C6B49C;
 }

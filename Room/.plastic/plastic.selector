@@ -1,4 +1,0 @@
-repository "Room@homologicus@cloud"
-  path "/"
-    smartbranch "/main"              
-     

@@ -86,11 +86,11 @@ const data = [
     { 'Name': 'Painting18', 'Date': '1990', 'Description': 'This is Description for Painting18.' },
     { 'Name': 'Painting19', 'Date': '1990', 'Description': 'This is Description for Painting19.' },
     { 'Name': 'Potrait3', 'Date': '1990', 'Description': 'This is Description for Potrait3.' },
-    { 'Name': 'Coinboard', 'Date': '1990', 'Description': '' },
-    { 'Name': 'Amphora02Stand', 'Date': '1990', 'Description': ' of Amphora02Stand' },
-    { 'Name': 'Lucerna', 'Date': '1990', 'Description': 'for the piece of Lucerna' },
-    { 'Name': 'Amphora01', 'Date': '1990', 'Description': 'for the piece of Amphora01' },
-    { 'Name': 'Mensa01', 'Date': '1990', 'Description': 'for the piece of Mensa01' },
+    { 'Name': 'Coinboard', 'Date': '1990', 'Description': 'This is Description for the homologicus idea.' },
+    { 'Name': 'Amphora02Stand', 'Date': '1990', 'Description': 'This is Description of Amphora02Stand' },
+    { 'Name': 'Lucerna', 'Date': '1990', 'Description': 'This is Description for the piece of Lucerna' },
+    { 'Name': 'Amphora01', 'Date': '1990', 'Description': 'This is Description for the piece of Amphora01' },
+    { 'Name': 'Mensa01', 'Date': '1990', 'Description': 'This is Description for the piece of Mensa01' },
 ]
 
 console.log(this.artifacts);
